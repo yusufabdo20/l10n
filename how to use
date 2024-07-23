@@ -1,0 +1,15 @@
+
+            Row(
+              children: [
+                TextButton(
+                    onPressed: () {
+                      BlocProvider.of<LocaleBloc>(context)
+                          .add(LocaleEvent.toggle);
+                    },
+                    child:
+                        Text(AppLocalizations.of(context).translate("lang"))),
+                const Icon(Icons.language),
+              ],
+            ),
+
+            
